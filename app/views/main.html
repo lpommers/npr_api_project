@@ -1,6 +1,12 @@
 <div ng-controller = 'MainCtrl'>
-  <ol>
-    <li ng-repeat = 'story in news'>{{story.title['$text']}}</li>
-  </ol>
+  <ul>
+    <li ng-repeat = 'story in news'>
+      <h2>
+        <a ng-href = '{{story.link[0]["$text"]}}'>{{story.title['$text']}}</a>
+      </h2>
+      <small>{{story.byline[0].name.$text}}</small> <br>
+      <p ng-bind-html="story.teaser.$text"></p>
+    </li>
+  </ul>
 
 </div>
