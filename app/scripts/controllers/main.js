@@ -10,8 +10,9 @@
 angular.module('nprApiProjectApp')
   .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
   	$scope.news = [];
-  	$http.get('https://api.npr.org/query?date=current&output=JSON&apiKey=MDE1ODE3ODQzMDE0MDczMjkzNDU1ZGE0NQ001').success(function(data){
+  	$http.get('https://api.npr.org/query?&output=JSON&apiKey=MDE1ODE3ODQzMDE0MDczMjkzNDU1ZGE0NQ001').success(function(data){
   		$scope.news = data.list.story;
-  		console.log($scope.news)
+  		console.log($scope.news);
   	});
   }]);
+
