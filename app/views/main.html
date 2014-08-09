@@ -6,6 +6,7 @@
       </h2>
       <small>{{story.byline[0].name.$text}}</small> <br>
       <p ng-bind-html="story.teaser.$text"></p>
+      <img ng-src = '{{story.image[0].src}}' alt="">
     </li>
   </ul>
 
